@@ -551,6 +551,80 @@ body {
   color: var(--color-fg-default);
 }
 
+/* ── Download banner ── */
+.download-banner {
+  background: var(--color-canvas-subtle);
+  border: 1px solid var(--color-border-default);
+  border-left: 3px solid #e6edf3;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.12s;
+  overflow: hidden;
+}
+
+.download-banner:hover {
+  border-color: #848d97;
+  border-left-color: #ffffff;
+  background: #1c2128;
+  transform: translateY(-1px);
+}
+
+.download-banner:active {
+  transform: translateY(0);
+}
+
+.download-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+}
+
+.download-banner-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.download-banner-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-fg-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.download-banner-os {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-fg-default);
+  letter-spacing: -0.01em;
+}
+
+.download-apple-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--color-fg-default);
+}
+
+.download-banner-arrow {
+  width: 20px;
+  height: 20px;
+  color: var(--color-fg-muted);
+  flex-shrink: 0;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.download-banner:hover .download-banner-arrow {
+  color: var(--color-fg-default);
+  transform: translateY(2px);
+}
+
 /* ── Responsive ── */
 @media (max-width: 600px) {
   .header {
